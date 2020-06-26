@@ -1,0 +1,27 @@
+/* 画像の大きさを指定 */
+.gallery img {
+  width: 75px;
+  height: 75px;
+}
+/* a タグの title 属性が表示されないように */
+.gallery a {
+  color: transparent; /* 透明色 */
+}
+
+/* 写真をクリックしたときに、ズームアップする為の設定 */
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
